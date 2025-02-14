@@ -356,3 +356,24 @@ body {
     }
   }
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #0f1420;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #c91515;
+}
+
+/* Firefox scrollbar styles */
+section.list {
+  scrollbar-color: #bc0e0e rgb(202, 190, 255);
+  scrollbar-width: thin;
+}
