@@ -87,7 +87,7 @@ export const tools = [
 ];
 export const Projects = [
   {
-    id: 4,
+    id: 5,
     name: "Meta Donate",
     tools: ["react", "java", "solidity", "mysql", "tailwindcss", "npm"],
     image: "./images/metadonate.png",
@@ -96,13 +96,23 @@ export const Projects = [
     forward: "MetaDonate",
   },
   {
-    id: 3,
+    id: 4,
     name: "animeXstream",
     tools: ["react", "tailwindcss", "npm"],
     image: "./images/animeXstream.png",
     info: `animeXstream is a streaming platform for anime enthusiasts. Built with React and styled using TailwindCSS, it offers a seamless user experience. npm is used for managing dependencies.`,
     stars: 5,
     forward: "animeXstream",
+  },
+
+  {
+    id: 3,
+    name: "Elegant Dictionary",
+    tools: ["html", "tailwindcss", "react"],
+    image: "./images/dictionary.jpeg",
+    info: `Elegant dictionary is classy,elegant and interactive ,for boosting your vocab's and search word and bookmark you favourite's`,
+    stars: 2,
+    forward: "Elegant-dictionary",
   },
   {
     id: 2,

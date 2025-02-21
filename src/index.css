@@ -63,7 +63,7 @@ body {
 
 .tool {
   background-color: #181221;
-  box-shadow: 0 0 5px 2px rgb(32, 119, 118);
+  box-shadow: 0 0 5px 1px rgba(32, 119, 118, 0.6);
   border-radius: 30%;
   padding: 5px;
   transition: 0.3s ease all;
@@ -257,10 +257,10 @@ body {
 
 }
 
-@media screen and (min-width:300px) {
+@media screen and (min-width:360px) {
   @keyframes slide {
     to {
-      transform: translateX(-400%);
+      transform: translateX(-378%);
     }
   }
 }
