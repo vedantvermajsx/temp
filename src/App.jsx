@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState, Suspense } from "react";
+import { lazy, useState, Suspense, useEffect } from "react";
 import "./output.css";
 import "./index.css";
 const Features = lazy(() => import("./components/Features"));
@@ -7,9 +7,17 @@ const Project = lazy(() => import("./components/Project"));
 const Footer = lazy(() => import("./components/Footer"));
 const ScrollWatcher = lazy(() => import("./components/ScrollWatcher"));
 const Hero = lazy(() => import("./components/Hero"));
+
 function App() {
   const [showLoader, setShowLoader] = useState(true);
   const [showContent, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+    import("./components/script.js");
+    import("./components/Robot.js");
+    import("./components/RobotCanvas.js");
+  }, []);
+
   function HandleContentLoaded() {
     setTimeout(() => {
       setShowLoader(false);

@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useState, lazy } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import { createRobot } from "./RobotCanvas.js";
 
 const Footer = () => {
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const TEMPLATE_ID = "template_lr17rp1";
-  const PUBLICKEY = "jMx5bzPWmlYNaSvaO";
-  const SERVICE_ID = "service_iinsw15";
+
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const PUBLICKEY = import.meta.env.VITE_PUBLICKEY;
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -128,6 +130,8 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+            <canvas className="robot-canvas absolute z-[1000] left-0 top-0  pointer-events-none"></canvas>
+            {createRobot()}
           </div>
 
           {/* Contact Form */}

@@ -22,7 +22,7 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <div className="flex items-center will-change-contents p-2 justify-center mt-4 bg-gray-100/5 rounded-full shadow-lg gap-4">
+    <div className="flex items-center will-change-contents p-2 justify-center mt-4 bg-gray-100/5 rounded-full shadow-lg gap-4 cursor-pointer">
       <audio ref={audioRef} loop>
         <source src="./des mots.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
