@@ -1,16 +1,25 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown } from "react-icons/fa";
 
-const BackgroundMusic = () => {
+const BackgroundMusic = ({ props }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(1);
 
+  let wavesAnimation = document.querySelector(".sound-wave");
+  if (!wavesAnimation) {
+    wavesAnimation = document.querySelector(".sound-wave");
+  }
+
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
+      props.current.pause();
+      wavesAnimation.classList.remove("animate-waves");
     } else {
       audioRef.current.play();
+      props.current.play();
+      wavesAnimation.classList.add("animate-waves");
     }
     setIsPlaying(!isPlaying);
   };
@@ -20,7 +29,6 @@ const BackgroundMusic = () => {
     audioRef.current.volume = newVolume;
     setVolume(newVolume);
   };
-
   return (
     <div className="flex items-center will-change-contents p-2 justify-center mt-4 bg-gray-100/5 rounded-full shadow-lg gap-4 cursor-pointer">
       <audio ref={audioRef} loop>

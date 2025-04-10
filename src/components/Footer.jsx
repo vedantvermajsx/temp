@@ -9,9 +9,9 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  const PUBLICKEY = import.meta.env.VITE_PUBLICKEY;
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID = "template_lr17rp1";
+  const PUBLICKEY = "jMx5bzPWmlYNaSvaO";
+  const SERVICE_ID = "service_iinsw15";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

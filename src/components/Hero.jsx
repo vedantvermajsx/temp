@@ -3,9 +3,13 @@ import Header from "./Header";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const textRef = useRef(null);
+  const videoRef = useRef(null);
   const message = "Crafting robust and scalable Java applications";
 
   useEffect(() => {
@@ -26,41 +30,40 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if ("ScrollTimeline" in window) {
-      const background = document.querySelector(".hero-container");
-
-      const scrollTimeline = new ScrollTimeline({
-        source: document.scrollingElement,
-        axis: "block",
-        scrollOffsets: [CSS.percent(0), CSS.percent(100)],
-      });
-
-      const backgroundKeyframes = [
-        { transform: "scale(1)", opacity: 1 },
-        {
-          transform: "scale(1.6)",
-          opacity: 0,
-          offset: 0.2,
-        },
-      ];
-      const backgroundAnimation = new Animation(
-        new KeyframeEffect(background, backgroundKeyframes),
-        scrollTimeline
-      );
-      backgroundAnimation.play();
-    } else {
-      alert("All animations are not supported, continuing without it!");
-    }
+    const background = document.querySelector("#home");
+    gsap.to(background, {
+      opacity: 0,
+      scale: 2,
+      ease: "none",
+      duration: 1,
+      x: 0,
+      y: 0,
+      scrollTrigger: {
+        trigger: background,
+        start: "0% 0%",
+        end: "bottom 50%",
+        scrub: true,
+      },
+    });
   }, []);
 
   return (
     <div
       id="home"
-      className="hero-container will-change-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center"
+      className="hero-container relative will-change-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center"
     >
+      {/* Video Background */}
+      <video
+        ref={videoRef}
+        className="absolute top-0 left-0 w-full h-full object-cover z-1"
+        src="../../public/hero.mp4"
+        loop
+        muted
+      ></video>
+
       <Header />
       <div className="glass hero-content flex flex-col md:flex-row items-center justify-center max-w-3xl mx-auto">
-        <BsSoundwave className="absolute w-64 h-64 text-cyan-100/5 pointer-events-none"></BsSoundwave>
+        <BsSoundwave className="absolute w-64 h-64 text-cyan-100/5 pointer-events-none sound-wave"></BsSoundwave>
         <div className="place-items-center w-full md:w-1/4 mb-4 md:mb-0">
           <img
             src="./images/OIP.jpg"
@@ -100,7 +103,7 @@ const Hero = () => {
               className="bg-blue-400 hover:bg-blue-500 text-sm"
             />
           </div>
-          <BackgroundMusic />
+          <BackgroundMusic props={videoRef} />
         </div>
       </div>
     </div>

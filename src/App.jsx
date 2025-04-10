@@ -1,6 +1,8 @@
 import { lazy, useState, Suspense, useEffect } from "react";
 import "./output.css";
 import "./index.css";
+import CertificationShowcase from "./components/Certificate.jsx";
+
 const Features = lazy(() => import("./components/Features"));
 const Tools = lazy(() => import("./components/Tools"));
 const Project = lazy(() => import("./components/Project"));
@@ -60,6 +62,11 @@ function App() {
         >
           <ScrollWatcher></ScrollWatcher>
           <Hero />
+
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 overflow-hidden">
+            <div className="w-1 animate-scroll-down"></div>
+          </div>
+
           <div className="page">
             <Features />
           </div>
@@ -69,7 +76,11 @@ function App() {
             </h1>
             <Tools />
           </div>
-          <div className="project-container page mt-44">
+
+          <div className="page mt-64">
+            <CertificationShowcase></CertificationShowcase>
+          </div>
+          <div className="project-container page mt-64">
             <Project />
           </div>
           <Footer />

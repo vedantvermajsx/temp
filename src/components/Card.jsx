@@ -15,8 +15,9 @@ function Card({ title, para, id }) {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         cardRef.current,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 50, scale: 0.95 },
         {
+          scale: 1,
           opacity: 1,
           y: 0,
           duration: 1,
