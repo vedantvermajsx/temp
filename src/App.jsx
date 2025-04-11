@@ -2,6 +2,7 @@ import { lazy, useState, Suspense, useEffect } from "react";
 import "./output.css";
 import "./index.css";
 import CertificationShowcase from "./components/Certificate.jsx";
+import { isMobile } from "./components/script.js";
 
 const Features = lazy(() => import("./components/Features"));
 const Tools = lazy(() => import("./components/Tools"));
@@ -61,7 +62,13 @@ function App() {
           className="page overflow-x-hidden scroll-smooth "
         >
           <ScrollWatcher></ScrollWatcher>
-          <Hero />
+          <div className="page">
+            <Hero />
+
+            {!isMobile && <div className="page" />}
+            {!isMobile && <div className="page" />}
+            {!isMobile && <div className="page" />}
+          </div>
 
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 overflow-hidden">
             <div className="w-1 animate-scroll-down"></div>

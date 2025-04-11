@@ -1,5 +1,7 @@
 export const ROBOT = [];
 
+export const isMobile = document.body.clientWidth < 1000;
+
 function preload() {
   for (let i = 0; i < 16; i++) {
     const img = new Image();
@@ -8,4 +10,4 @@ function preload() {
   }
 }
 
-preload();
+if (!isMobile) preload();

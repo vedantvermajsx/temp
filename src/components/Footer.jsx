@@ -3,11 +3,13 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { createRobot } from "./RobotCanvas.js";
+import { isMobile } from "./script.js";
 
 const Footer = () => {
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const TEMPLATE_ID = "template_lr17rp1";
   const PUBLICKEY = "jMx5bzPWmlYNaSvaO";
@@ -15,6 +17,8 @@ const Footer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     var templateParams = {
       from_name: userName,
@@ -48,6 +52,8 @@ const Footer = () => {
         });
       }
     );
+
+    setIsLoading(false);
     setuserName("");
     setEmail("");
     setMessage("");
@@ -131,7 +137,7 @@ const Footer = () => {
               ))}
             </div>
             <canvas className="robot-canvas absolute z-[1000] left-0 top-0  pointer-events-none"></canvas>
-            {createRobot()}
+            {!isMobile && createRobot()}
           </div>
 
           {/* Contact Form */}
@@ -184,9 +190,9 @@ const Footer = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="w-full px-4 py-2 bg-[#22918c] text-white rounded-md hover:bg-[#287e7a] focus:outline-none  grid place-content-center"
               >
-                Send Message
+                {!isLoading ? "Send Message" : <MiniLoader />}
               </button>
             </form>
           </div>
@@ -205,6 +211,16 @@ const Footer = () => {
       </div>
       <Toaster />
     </footer>
+  );
+};
+
+const MiniLoader = () => {
+  return (
+    <div className="mini-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   );
 };
 

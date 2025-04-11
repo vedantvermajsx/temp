@@ -3,11 +3,9 @@ import Header from "./Header";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { isMobile } from "./script";
 
 const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
   const textRef = useRef(null);
   const videoRef = useRef(null);
   const message = "Crafting robust and scalable Java applications";
@@ -30,21 +28,51 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const background = document.querySelector("#home");
-    gsap.to(background, {
-      opacity: 0,
-      scale: 2,
-      ease: "none",
-      duration: 1,
-      x: 0,
-      y: 0,
-      scrollTrigger: {
-        trigger: background,
-        start: "0% 0%",
-        end: "bottom 50%",
-        scrub: true,
-      },
-    });
+    if (!isMobile && "ScrollTimeline" in window) {
+      const background = document.querySelector(".hero-container");
+
+      const scrollTimeline = new ScrollTimeline({
+        source: document.scrollingElement,
+        axis: "block",
+        scrollOffsets: [CSS.percent(0), CSS.percent(100)],
+      });
+
+      const backgroundKeyframes = [
+        {
+          opacity: 1,
+          transform: "rotate3d(1, -1, 0, 0deg)",
+          scale: 1,
+          position: "fixed",
+          zIndex: 0,
+        },
+        {
+          transform: "rotate3d(1, -1, 0, 180deg)",
+          opacity: 0,
+          offset: 0.3,
+          position: "fixed",
+          scale: 0.5,
+        },
+        {
+          transform: "rotate3d(1, -1, 1, 360deg)",
+          opacity: 0,
+          offset: 0.5,
+          position: "fixed",
+          scale: 0.3,
+        },
+        {
+          transform: "rotate3d(1, -1, 1, 360deg)",
+          position: "fixed",
+          scale: 0,
+          zIndex: -1,
+          offset: 1,
+        },
+      ];
+      const backgroundAnimation = new Animation(
+        new KeyframeEffect(background, backgroundKeyframes),
+        scrollTimeline
+      );
+      backgroundAnimation.play();
+    }
   }, []);
 
   return (
@@ -53,13 +81,15 @@ const Hero = () => {
       className="hero-container relative will-change-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center"
     >
       {/* Video Background */}
-      <video
-        ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover z-1"
-        src="../../public/hero.mp4"
-        loop
-        muted
-      ></video>
+      {!isMobile && (
+        <video
+          ref={videoRef}
+          className="absolute top-0 left-0 w-full h-full object-cover z-1"
+          src="../../public/hero.mp4"
+          loop
+          muted
+        ></video>
+      )}
 
       <Header />
       <div className="glass hero-content flex flex-col md:flex-row items-center justify-center max-w-3xl mx-auto">
@@ -103,7 +133,7 @@ const Hero = () => {
               className="bg-blue-400 hover:bg-blue-500 text-sm"
             />
           </div>
-          <BackgroundMusic props={videoRef} />
+          <BackgroundMusic props={isMobile ? null : videoRef} />
         </div>
       </div>
     </div>

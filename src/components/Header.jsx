@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setMenuState] = useState(false);
 
   return (
-    <nav className="glass header top-5 left-2/5 h-[50px] md:h-[70px] flex justify-between items-center p-6 cursor-pointer">
+    <nav className="glass header top-5 left-2/5 h-[50px] md:h-[70px] flex justify-between items-center p-6 cursor-pointer fixed md:absolute">
       <div className="flex items-center space-x-4">
         <img src="./svg/logo.svg" alt="Logo" className="h-10" />
         <h1 className="text-[crimson] text-2xl font-bold">Kumo Kirie</h1>

@@ -12,10 +12,7 @@ function Features() {
 
   if (!isLoaded) return <Loader></Loader>;
   return (
-    <div
-      id="about"
-      className="page p-10 mt-64 flex flex-wrap gap-8 justify-center"
-    >
+    <div id="about" className="page p-10 flex flex-wrap gap-8 justify-center">
       {features.map((feature) => (
         <Card
           key={feature[0]}
