@@ -81,6 +81,17 @@ const Hero = () => {
       className="hero-container relative will-change-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center"
     >
       {/* Video Background */}
+
+      {isMobile && (
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-1"
+          src="../../public/hero.mp4"
+          loop
+          muted
+          autoPlay
+        ></video>
+      )}
+
       {!isMobile && (
         <video
           ref={videoRef}

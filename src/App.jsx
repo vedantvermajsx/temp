@@ -1,9 +1,8 @@
 import { lazy, useState, Suspense, useEffect } from "react";
 import "./output.css";
 import "./index.css";
-import CertificationShowcase from "./components/Certificate.jsx";
-import { isMobile } from "./components/script.js";
 
+import { isMobile } from "./components/script.js";
 const Features = lazy(() => import("./components/Features"));
 const Tools = lazy(() => import("./components/Tools"));
 const Project = lazy(() => import("./components/Project"));
@@ -84,9 +83,6 @@ function App() {
             <Tools />
           </div>
 
-          <div className="page mt-64">
-            <CertificationShowcase></CertificationShowcase>
-          </div>
           <div className="project-container page mt-64">
             <Project />
           </div>
