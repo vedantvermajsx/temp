@@ -37,6 +37,7 @@ const Footer = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
+        setIsLoading(false);
         toast.success(
           "Thank you for your message. I'll get back to you soon.",
           {
@@ -46,14 +47,13 @@ const Footer = () => {
         );
       },
       (e) => {
+        setIsLoading(false);
         toast.error("some error occured!, dont give up!", {
           duration: 5000,
           position: "bottom-center",
         });
       }
     );
-
-    setIsLoading(false);
     setuserName("");
     setEmail("");
     setMessage("");
@@ -192,7 +192,9 @@ const Footer = () => {
                 type="submit"
                 className="w-full px-4 py-2 bg-[#22918c] text-white rounded-md hover:bg-[#287e7a] focus:outline-none  grid place-content-center"
               >
-                {!isLoading ? "Send Message" : <MiniLoader />}
+                {console.log(isLoading)}
+                {isLoading ? "Sending..." : "Send Message"}
+                {/* {!isLoading ? "Send Message" : <MiniLoader />}*/}
               </button>
             </form>
           </div>

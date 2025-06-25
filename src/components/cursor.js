@@ -1,5 +1,4 @@
-import { isMobile } from "./script";
-
+import { isMobile } from "./script.js";
 function Mouse() {
   const body = document.querySelector("body");
   const first = document.querySelector(".mouse-follower .first");

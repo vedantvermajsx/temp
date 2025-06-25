@@ -19,10 +19,10 @@ function Tools() {
 
 function Tool({ tool }) {
   return (
-    <img
-      className="tool w-1/12 max-sm:w-2/12 place-items-center"
+    <img 
+      className="tool min-w-[8vw] min-h-[8vw] w-1/12 max-sm:w-2/12 place-items-center"
       alt={tool[0]}
-      src={tool[1]}
+      src={tool[1]} 
     />
   );
 }

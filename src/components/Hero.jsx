@@ -3,7 +3,7 @@ import Header from "./Header";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
-import { isMobile } from "./script";
+import { isMobile } from "./script.js";
 
 const Hero = () => {
   const textRef = useRef(null);
@@ -109,7 +109,7 @@ const Hero = () => {
           <img
             src="./images/OIP.jpg"
             alt="Hero Image"
-            className="rounded-lg shadow-xl w-[50%] md:w-[80%] duration-300 h-auto"
+            className="rounded-lg shadow-xl w-[50%] md:w-[80%] duration-300 h-auto" loading="eager"
           />
         </div>
         <div className="hero-text w-full md:w-2/3 mt-4 md:mt-0 md:ml-8">
@@ -147,6 +147,11 @@ const Hero = () => {
           <BackgroundMusic props={isMobile ? null : videoRef} />
         </div>
       </div>
+      
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 overflow-hidden">
+            <div className="w-1 animate-scroll-down"></div>
+          </div>
+
     </div>
   );
 };

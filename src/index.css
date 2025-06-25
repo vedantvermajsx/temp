@@ -177,7 +177,7 @@ body {
 
 
 .project-card {
-  height: 70vh;
+  height: 100%;
   transition: 0.3s ease transform;
 }
 

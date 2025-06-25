@@ -39,11 +39,11 @@ function Card({ title, para, id }) {
   return (
     <div
       ref={cardRef}
-      className="w-2/3 rounded-2xl text-center max-sm:w-11/12 md:w-5/12 lg:w-3/12 text-pretty text-slate-300 card"
+      className="w-2/3 rounded-2xl text-pretty max-sm:w-11/12 md:w-5/12 lg:w-5/12 xl:w-3/12  text-slate-300 card h-auto "
     >
       <div className="head pt-4">
         <ul className="flex justify-center list-none gap-3">
-          <li className="text-red-500 text-3xl">
+          <li className="text-red-500 text-3xl  ">
             {id === 1 ? (
               <Code2 />
             ) : id === 2 ? (
@@ -56,13 +56,13 @@ function Card({ title, para, id }) {
               <GiPerspectiveDiceFive />
             )}
           </li>
-          <li className="text-xl max-md:text-sm text-red-500">
+          <li className="min-text-[0.8] text-[1.2em]  text-red-500 max-2xl:text-[0.95em]">
             <strong>{title}</strong>
           </li>
         </ul>
       </div>
       <div className="bottom p-3">
-        <p>{para}</p>
+        <p  className="min-text-[0.8] text-[1em] max-2xl:text-[0.95em] ">{para}</p>
       </div>
     </div>
   );

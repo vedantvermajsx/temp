@@ -1,4 +1,5 @@
 import { lazy, useState, Suspense, useEffect } from "react";
+import GitHubCalendar from "react-github-calendar";
 import "./output.css";
 import "./index.css";
 
@@ -34,7 +35,7 @@ function App() {
           !showLoader && showContent && "loader"
         }`}
       >
-        <div className="flex justify-center relative h-[100vh]  items-center">
+        <div className="flex justify-center relative h-[100vh] items-center">
           <svg
             className="custom-icon"
             width="200pt"
@@ -68,11 +69,6 @@ function App() {
             {!isMobile && <div className="page" />}
             {!isMobile && <div className="page" />}
           </div>
-
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 overflow-hidden">
-            <div className="w-1 animate-scroll-down"></div>
-          </div>
-
           <div className="page">
             <Features />
           </div>
@@ -85,6 +81,21 @@ function App() {
 
           <div className="project-container page mt-64">
             <Project />
+          </div>
+
+          <div className="relative w-[100vw] h-[100vh] flex items-center justify-center">
+            <div className="bg-white/35 shadow-lg rounded-lg p-6 w-[90%] md:w-[70%] lg:w-[80%]">
+              <h2 className="text-3xl font-bold text-green-600 mb-6 text-center">
+                GitHub Contributions
+              </h2>
+              <GitHubCalendar
+                username="creepjxvedant"
+                blockSize={16}
+                blockMargin={4}
+                color="#1e90ff"
+                fontSize={16}
+              />
+            </div>
           </div>
           <Footer />
         </main>
