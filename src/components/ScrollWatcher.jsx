@@ -21,7 +21,7 @@ export default function ScrollWatcher() {
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 36 36">
         <circle
           className="text-white stroke-current"
-          strokeWidth="4"
+          strokeWidth="3"
           strokeLinecap="round"
           fill="transparent"
           r="16"

@@ -1,9 +1,10 @@
-import { useState, lazy } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { useState} from "react";
+import { FaGithub, FaLinkedin,FaEnvelope } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { createRobot } from "./RobotCanvas.js";
 import { isMobile } from "./script.js";
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   const [userName, setuserName] = useState("");
@@ -46,7 +47,7 @@ const Footer = () => {
           }
         );
       },
-      (e) => {
+      () => {
         setIsLoading(false);
         toast.error("some error occured!, dont give up!", {
           duration: 5000,
@@ -72,7 +73,7 @@ const Footer = () => {
               About Me
             </h3>
             <p className="text-base text-gray-500">
-              I'm a passionate developer creating elegant solutions to complex
+              I&apos;m a passionate developer creating elegant solutions to complex
               problems. Always learning, always growing.
             </p>
           </div>
@@ -101,41 +102,43 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
               Connect
             </h3>
-            <div className="flex space-x-6">
-              {[
-                {
-                  icon: FaGithub,
-                  label: "GitHub",
-                  href: "https://github.com/creepJxvedant",
-                },
-                {
-                  icon: FaLinkedin,
-                  label: "LinkedIn",
-                  href: "https://linkedin.com/in/creepJxvedant",
-                },
-                {
-                  icon: FaTwitter,
-                  label: "Twitter",
-                  href: "https://twitter.com/creepJxvedant",
-                },
-                {
-                  icon: FaEnvelope,
-                  label: "Email",
-                  href: "mailto:vedantverma303@gmail.com",
-                },
-              ].map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">{label}</span>
-                  <Icon className="h-6 w-6" />
-                </a>
-              ))}
-            </div>
+
+<div className="flex space-x-6">
+  {[
+    {
+      icon: FaGithub,
+      label: "GitHub",
+      href: "https://github.com/creepJxvedant",
+    },
+    {
+      icon: FaLinkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/vedantverma7890/",
+    },
+    {
+      icon: SiLeetcode,
+      label: "LeetCode",
+      href: "https://leetcode.com/u/vedant_verma786/",
+    },
+    {
+      icon: FaEnvelope,
+      label: "Email",
+      href: "mailto:vedantverma303@gmail.com",
+    },
+  ].map(({ icon: Icon, label, href }) => (
+    <a
+      key={label}
+      href={href}
+      className="text-gray-400 hover:text-white transition-colors duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="sr-only">{label}</span>
+      <Icon className="h-6 w-6" />
+    </a>
+  ))}
+</div>
+
             <canvas className="robot-canvas absolute z-[1000] left-0 top-0  pointer-events-none"></canvas>
             {!isMobile && createRobot()}
           </div>
@@ -192,8 +195,7 @@ const Footer = () => {
                 type="submit"
                 className="w-full px-4 py-2 bg-[#22918c] text-white rounded-md hover:bg-[#287e7a] focus:outline-none  grid place-content-center"
               >
-                {console.log(isLoading)}
-                {isLoading ? "Sending..." : "Send Message"}
+                {isLoading ? <MiniLoader/>: "Send Message"}
                 {/* {!isLoading ? "Send Message" : <MiniLoader />}*/}
               </button>
             </form>
@@ -203,7 +205,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 border-t border-gray-700 pt-8">
           <p className="text-base text-gray-400 text-center">
-            © {new Date().getFullYear()} Kumo Kirie. All rights reserved.
+            © {new Date().getFullYear()} Vedant●JSX. All rights reserved.
           </p>
         </div>
       </div>

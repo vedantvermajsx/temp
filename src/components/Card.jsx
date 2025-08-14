@@ -5,6 +5,7 @@ import { Code2 } from "lucide-react";
 import { BiBulb } from "react-icons/bi";
 import { GiPerspectiveDiceFive, GiTeamUpgrade } from "react-icons/gi";
 import { ImParagraphCenter } from "react-icons/im";
+import PropTypes from "prop-types"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,5 +68,11 @@ function Card({ title, para, id }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  para: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Card;

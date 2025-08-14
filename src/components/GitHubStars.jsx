@@ -1,5 +1,4 @@
-import React from 'react';
-
+import PropTypes from "prop-types";
 const GitHubStars = ({link,stars}) => {
   return (
     <div className='w-full relative flex items-center justify-between space-x-2'>
@@ -39,6 +38,11 @@ const GitHubStars = ({link,stars}) => {
           
           </div>
   );
+};
+
+GitHubStars.propTypes = {
+  link: PropTypes.string.isRequired,   
+  stars: PropTypes.number.isRequired,  
 };
 
 export default GitHubStars;

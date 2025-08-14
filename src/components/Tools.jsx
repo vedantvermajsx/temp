@@ -1,4 +1,5 @@
 import { tools } from "./data";
+import PropTypes from 'prop-types';
 
 function Tools() {
   return (
@@ -26,5 +27,9 @@ function Tool({ tool }) {
     />
   );
 }
+
+Tool.propTypes = {
+  tool: PropTypes.arrayOf(PropTypes.string).isRequired, // expects [alt, src]
+};
 
 export default Tools;

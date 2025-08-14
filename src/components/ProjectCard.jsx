@@ -1,8 +1,9 @@
 import GitHubStars from "./GitHubStars";
+import PropTypes from "prop-types";
 
 function ProjectCard({ id, name, info, image, tools, stars, forward }) {
   return (
-    <div className="project-card bg-gray-900 rounded-lg shadow-2xl p-4 max-w-xs text-white">
+    <div id={id} className="project-card bg-gray-900 rounded-lg shadow-2xl p-4 max-w-xs text-white">
       <div className="relative h-56 rounded-lg overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -47,5 +48,15 @@ function ProjectCard({ id, name, info, image, tools, stars, forward }) {
     </div>
   );
 }
+
+ProjectCard.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  name: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired, 
+  tools: PropTypes.arrayOf(PropTypes.string).isRequired,
+  stars: PropTypes.number, 
+  forward: PropTypes.string,
+};
 
 export default ProjectCard;

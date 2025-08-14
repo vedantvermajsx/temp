@@ -10,6 +10,4 @@ function preload() {
   }
 }
 
-function isLoaded() {}
-
 if (!isMobile) preload();

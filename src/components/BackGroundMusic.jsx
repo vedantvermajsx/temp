@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown } from "react-icons/fa";
 
-const BackgroundMusic = ({ props }) => {
+const BackgroundMusic = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.6);
@@ -14,11 +14,9 @@ const BackgroundMusic = ({ props }) => {
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
-      if (props !== null) props.current.pause();
       wavesAnimation.classList.remove("animate-waves");
     } else {
       audioRef.current.play();
-      if (props !== null) props.current.play();
       wavesAnimation.classList.add("animate-waves");
     }
     setIsPlaying(!isPlaying);

@@ -3,11 +3,12 @@ import Header from "./Header";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
-import { isMobile } from "./script.js";
+import {isMobile} from './script.js';
+import PropTypes from "prop-types";
+import { FaFilePdf } from "react-icons/fa";
 
 const Hero = () => {
   const textRef = useRef(null);
-  const videoRef = useRef(null);
   const message = "Crafting robust and scalable Java applications";
 
   useEffect(() => {
@@ -80,34 +81,13 @@ const Hero = () => {
       id="home"
       className="hero-container relative will-change-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center"
     >
-      {/* Video Background */}
-
-      {isMobile && (
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-1"
-          src="../../public/hero.mp4"
-          loop
-          muted
-          autoPlay
-        ></video>
-      )}
-
-      {!isMobile && (
-        <video
-          ref={videoRef}
-          className="absolute top-0 left-0 w-full h-full object-cover z-1"
-          src="../../public/hero.mp4"
-          loop
-          muted
-        ></video>
-      )}
 
       <Header />
       <div className="glass hero-content flex flex-col md:flex-row items-center justify-center max-w-3xl mx-auto">
         <BsSoundwave className="absolute w-64 h-64 text-cyan-100/5 pointer-events-none sound-wave"></BsSoundwave>
         <div className="place-items-center w-full md:w-1/4 mb-4 md:mb-0">
           <img
-            src="./images/OIP.jpg"
+            src="./images/logo.jpg"
             alt="Hero Image"
             className="rounded-lg shadow-xl w-[50%] md:w-[80%] duration-300 h-auto" loading="eager"
           />
@@ -132,19 +112,21 @@ const Hero = () => {
               className="bg-black text-white text-sm hover:bg-[#1a1818]"
             />
             <SocialButton
-              href="https://linkedin.com/in/_icycoldwater"
+               href="https://www.linkedin.com/in/vedantverma7890/"
               icon={<FaLinkedin className="mr-2" />}
               text="LinkedIn"
               className="bg-blue-600 hover:bg-blue-700 text-sm"
             />
-            <SocialButton
-              href="https://twitter.com/_icycoldwater"
-              icon={<FaTwitter className="mr-2" />}
-              text="Twitter"
-              className="bg-blue-400 hover:bg-blue-500 text-sm"
-            />
+           <SocialButton
+  href="https://github.com/creepJxvedant/creepJxvedant/raw/master/Vedant_Verma_Resume.pdf" 
+  icon={<FaFilePdf className="mr-2" />}
+  text="CV"
+  target="_blank"
+  className="bg-gray-600 hover:bg-gray-700 text-sm"
+/>
+
           </div>
-          <BackgroundMusic props={isMobile ? null : videoRef} />
+          <BackgroundMusic/>
         </div>
       </div>
       
@@ -167,5 +149,12 @@ const SocialButton = ({ href, icon, text, className }) => (
     {text}
   </a>
 );
+
+SocialButton.propTypes = {
+  href: PropTypes.string.isRequired,     
+  icon: PropTypes.node.isRequired,       
+  text: PropTypes.node,                  
+  className: PropTypes.string,           
+};
 
 export default Hero;
