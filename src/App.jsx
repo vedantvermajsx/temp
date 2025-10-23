@@ -20,18 +20,6 @@ function App() {
     import("./components/script.js");
     import("./components/Robot.js");
     import("./components/RobotCanvas.js");
-
-     const lenis = new Lenis({
-        duration:0.7,
-        smoothWheel: true,
-      });
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
   }, []);
 
   function HandleContentLoaded() {

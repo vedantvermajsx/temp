@@ -158,6 +158,10 @@ body {
   filter: blur(2px);
 }
 
+.tool:hover{
+  background: #181221;
+}
+
 .slider2:hover .tool:not(:hover) {
   filter: blur(2px);
 }
@@ -539,4 +543,3 @@ section.list {
     transition: none !important;
   }
 }
-
