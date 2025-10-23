@@ -1,5 +1,6 @@
 import { lazy, useState, Suspense, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
+import Lenis from "@studio-freight/lenis";
 import "./output.css";
 import "./index.css";
 
@@ -19,6 +20,18 @@ function App() {
     import("./components/script.js");
     import("./components/Robot.js");
     import("./components/RobotCanvas.js");
+
+     const lenis = new Lenis({
+        duration:0.7,
+        smoothWheel: true,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
   }, []);
 
   function HandleContentLoaded() {
@@ -31,7 +44,7 @@ function App() {
   return (
     <>
       <div
-        className={`will-change-auto w-[100vw] h-[100vh] bg-[crimson] z-[100] fixed pointer-events-none ${
+        className={`will-change-auto w-[100vw] h-[100vh] bg-[crimson] z-[9999] fixed pointer-events-none ${
           !showLoader && showContent && "loader"
         }`}
       >

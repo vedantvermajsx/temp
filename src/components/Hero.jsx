@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import Header from "./Header";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
 import {isMobile} from './script.js';
