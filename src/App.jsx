@@ -86,7 +86,7 @@ function App() {
                 GitHub Contributions
               </h2>
               <GitHubCalendar
-                username="creepjxvedant"
+                username="vedantvermajsx"
                 blockSize={16}
                 blockMargin={4}
                 color="#1e90ff"

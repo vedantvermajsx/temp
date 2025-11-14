@@ -131,5 +131,13 @@ export const Projects = [
     info: `tic-tac-toe is a classic game implemented using HTML, CSS, and JavaScript. It features a responsive design and interactive gameplay.`,
     stars: 2,
     forward: "tic-tac-toe",
+  },{
+      id: 0,
+      name: "Ghostery",
+      tools: ["html", "css", "js", "npm"],
+      image: "./images/ghostery.png",
+      info: `Ghostery is a lightweight, fun-focused game discovery platform where users can explore, search, and browse games effortlessly. Designed for entertainment rather than complexity, the project fetches data from external game APIs and presents them in a clean, visually appealing interface.`,
+      stars: 2,
+      forward: "Ghostery",
   },
 ];

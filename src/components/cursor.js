@@ -5,8 +5,8 @@ function Mouse() {
   const second = document.querySelector(".mouse-follower .second");
   const third = document.querySelector(".mouse-follower .third");
 
-  let mouseX = -100;
-  let mouseY = 300;
+  let mouseX = -200;
+  let mouseY = -100;
 
   let firstX = 0;
   let firstY = 0;
