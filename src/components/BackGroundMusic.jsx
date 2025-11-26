@@ -1,58 +1,44 @@
 import { useRef, useState } from "react";
-import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown } from "react-icons/fa";
 
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.6);
-
-  let wavesAnimation = document.querySelector(".sound-wave");
-  if (!wavesAnimation) {
-    wavesAnimation = document.querySelector(".sound-wave");
-  }
 
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
-      wavesAnimation.classList.remove("animate-waves");
     } else {
       audioRef.current.play();
-      wavesAnimation.classList.add("animate-waves");
     }
     setIsPlaying(!isPlaying);
   };
 
-  const handleVolumeChange = (e) => {
-    const newVolume = e.target.value;
-    audioRef.current.volume = newVolume;
-    setVolume(newVolume);
-  };
   return (
-    <div className="flex items-center will-change-contents p-2 justify-center mt-4 bg-gray-100/5 rounded-full shadow-lg gap-4 cursor-pointer">
-      <audio ref={audioRef} loop>
-        <source src="./des mots.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
-      <button
-        onClick={togglePlayPause}
-        className="text-white bg-blue-500/80 hover:bg-blue-600/70 p-2 rounded-full"
-      >
-        {isPlaying ? <FaPause /> : <FaPlay />}
-      </button>
-      <div className="flex items-center space-x-2">
-        <FaVolumeDown className="text-white" />
-        <input
-          className="volume-slider"
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={volume}
-          onChange={handleVolumeChange}
-        />
-        <FaVolumeUp className="text-white" />
-      </div>
-    </div>
+        <div  onClick={togglePlayPause} className="fixed z-[9999] w-8 h-8 flex items-center justify-center cursor-pointer bottom-10 left-6 lg:left-20">
+
+          <audio ref={audioRef} loop>
+            <source src="./des mots.mp3" type="audio/mp3" />
+          </audio>
+
+          <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+
+          <div
+              className={`absolute w-8 h-8 rounded-full border border-blue-300 
+            ${isPlaying ? "animate-ripple1" : "opacity-10"}`}
+          />
+
+
+          <div
+              className={`absolute w-8 h-8 rounded-full border border-blue-400 
+            ${isPlaying ? "animate-ripple2" : "opacity-20"}`}
+          />
+
+          <div
+              className={`absolute w-8 h-8 rounded-full border border-blue-300 
+            ${isPlaying ? "animate-ripple3" : "opacity-30"}`}
+          />
+
+        </div>
   );
 };
 

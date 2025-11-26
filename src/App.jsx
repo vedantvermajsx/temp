@@ -5,6 +5,7 @@ import "./output.css";
 import "./index.css";
 
 import { isMobile } from "./components/script.js";
+import BackgroundMusic from "./components/BackGroundMusic.jsx";
 const Features = lazy(() => import("./components/Features"));
 const Tools = lazy(() => import("./components/Tools"));
 const Project = lazy(() => import("./components/Project"));
@@ -13,7 +14,7 @@ const ScrollWatcher = lazy(() => import("./components/ScrollWatcher"));
 const Hero = lazy(() => import("./components/Hero"));
 
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
   const [showContent, setContentLoaded] = useState(false);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ function App() {
   return (
     <>
       <div
-        className={`will-change-auto w-[100vw] h-[100vh] bg-[crimson] z-[9999] fixed pointer-events-none ${
+        className={`will-change-auto w-[100vw] h-[100vh] ultimate bg-[crimson]  fixed pointer-events-none ${
           !showLoader && showContent && "loader"
         }`}
       >
@@ -61,6 +62,7 @@ function App() {
           <ScrollWatcher></ScrollWatcher>
           <div className="page">
             <Hero />
+              <BackgroundMusic/>
 
             {!isMobile && <div className="page" />}
             {!isMobile && <div className="page" />}

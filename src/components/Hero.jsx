@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import Header from "./Header";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import BackgroundMusic from "./BackGroundMusic";
 import { BsSoundwave } from "react-icons/bs";
 import {isMobile} from './script.js';
 import PropTypes from "prop-types";
@@ -126,7 +125,6 @@ const Hero = () => {
 />
 
           </div>
-          <BackgroundMusic/>
         </div>
       </div>
       
