@@ -213,11 +213,6 @@ const Footer = () => {
         <div className="sparkles"></div>
       </div>
       <Toaster />
-
-      <div className='absolute bottom-10 w-[200px] h-[60px] bg-transparent z-[9999]'>
-        <img className='w-[100%] h-[100%]' src='https://counter1.optistats.ovh/private/freecounterstat.php?c=wkbd7qc5e2baecql5a5gpc8q9ataj16p' alt='counter'></img>
-      </div>
-
     </footer>
   );
 };
