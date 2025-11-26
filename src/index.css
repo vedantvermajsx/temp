@@ -75,7 +75,7 @@ body {
   padding: 5px;
   transition: 0.3s ease all;
   will-change: transform, filter;
-  width: 100px;
+  width: 20vw;
 }
 
 .glass {
@@ -570,4 +570,15 @@ section.list {
 
 .ultimate{
   z-index: 99999;
+}
+
+@media screen and (max-width:600px){
+  .slider-container:after,.slider-container:before{
+    box-shadow: 0 1px 30px 50px  rgba(6,3,15,1);
+  }
+  .tool{
+    width: 50vw;
+    box-shadow: 0 0 120px 10px rgb(151, 21, 21);
+  }
+
 }
