@@ -26,7 +26,7 @@ function Tool({ tool }) {
     return (
         <motion.div
             drag
-            whileDrag={{ scale: 1.1 }}
+            whileDrag={{ scale: 0.85 }}
             dragConstraints={{ left: -500, right: 500, top: -100, bottom: 100 }}
             style={box}
             animate={controls}

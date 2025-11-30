@@ -177,27 +177,11 @@ body {
   animation: slide 30s 5s infinite linear reverse;
 }
 
-.slider:hover .tool:not(:hover) {
-  filter: blur(2px);
-}
-
-.tool:hover{
-  background: #181221;
-}
-
-.slider2:hover .tool:not(:hover) {
-  filter: blur(2px);
-}
-
-.tool:hover {
-  scale: 1.03;
-}
-
-.slider:has(:hover) {
+.slider:hover{
   animation-play-state: paused;
 }
 
-.slider2:has(:hover) {
+.slider2:hover {
   animation-play-state: paused;
 }
 
