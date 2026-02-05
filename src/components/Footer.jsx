@@ -11,10 +11,15 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  //
+  // const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  // const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  // const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 
-  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID="template_lr17rp1";
+  const PUBLIC_KEY="jMx5bzPWmlYNaSvaO";
+  const SERVICE_ID="service_iinsw15";
+
 
   console.log(TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID);
 
