@@ -5,14 +5,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086fe407-deba-488c-9795-d4b4d9e0e0b2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BackGroundMusic.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackGroundMusic.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Anurati-CO-561_G.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Features-gQXx6n8L.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Footer-BpsOtlN1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Hero-Dx1HzTvw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Project-C1FHm7GJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Robot-BI6tsiA5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/RobotCanvas-BuBYN35o.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/ScrollWatcher-X21xTGN1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/Tools-BgwaB56-.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/createLucideIcon-oubwsUkz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/data-lXPD7PC2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/hero2-BEc9Lt_Q.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/iconBase-D4wUsXfF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-7JihPKBm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-DCey20oi.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-DJdzieLi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-DVjHzVVu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/logo-DWnZw2l0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/des mots.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Anurati.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/hero2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/animeXstream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/dictionary.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/ghostery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/metadonate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/tictactoe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/todo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/robotball/skeleton-animation_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/cpp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/css.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/cursor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/docker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/git.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/html.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/intellij.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/java.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/js.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/kafka.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/maven.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/mysql.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/name.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/npm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/react_router.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/solidity.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/spring.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/tailwindcss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/vscode.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/svg/webstorm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GitHubStars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GitHubStars.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Project.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Project.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_B:/development/portfolio" value="34S3e9csnlCmnKSwxv1g5JVU3xz" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,22 +156,21 @@
       <workItem from="1764165034762" duration="2301000" />
       <workItem from="1764171787842" duration="7967000" />
       <workItem from="1764485444238" duration="912000" />
-      <workItem from="1764486432036" duration="679000" />
+      <workItem from="1764486432036" duration="1027000" />
+      <workItem from="1764905215302" duration="135000" />
+      <workItem from="1770265251666" duration="2035000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/BackGroundMusic.jsx</url>
-          <line>28</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

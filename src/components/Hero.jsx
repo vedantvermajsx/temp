@@ -105,7 +105,7 @@ const Hero = () => {
           </p>
           <div className="hero-buttons place-content-center flex flex-wrap gap-4">
             <SocialButton
-              href="https://github.com/creepJxvedant"
+              href="https://github.com/vedantvermajsx"
               icon={<FaGithub className="mr-2" />}
               text="GitHub"
               className="bg-black text-white text-sm hover:bg-[#1a1818]"
@@ -117,7 +117,7 @@ const Hero = () => {
               className="bg-blue-600 hover:bg-blue-700 text-sm"
             />
            <SocialButton
-  href="https://github.com/creepJxvedant/creepJxvedant/raw/master/Vedant_Verma_Resume.pdf" 
+  href="https://github.com/vedantvermajsx/vedantvermajsx/raw/master/Vedant_Verma_Resume.pdf"
   icon={<FaFilePdf className="mr-2" />}
   text="CV"
   target="_blank"

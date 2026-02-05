@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-const GitHubStars = ({link,stars}) => {
+const GitHubStars = ({link,git,stars}) => {
   return (
     <div className='w-full relative flex items-center justify-between space-x-2'>
     <a
-      href={`http://vedantvermajsx/${link}`}
+      href={git}
     className="flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#181717] text-white shadow hover:bg-[#0d0d0d] h-9 px-4 py-2 whitespace-pre md:flex group relative justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2"
     >
       <span className="absolute right-0 -mt-12 h-32 w-4 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
@@ -34,7 +34,7 @@ const GitHubStars = ({link,stars}) => {
       </div>
     </a>
 
-    <a href={`https://vedantvermajsx.github.io/${link}`} className='outline-red-600  cursor-pointer outline hover:bg-red-600 outline-2 text-center text-3xl text-gray-300 rounded w-[80px] h-[40px]'>→</a>
+    <a href={link} className='outline-red-600  cursor-pointer outline hover:bg-red-600 outline-2 text-center text-3xl text-gray-300 rounded w-[80px] h-[40px]'>→</a>
           
           </div>
   );

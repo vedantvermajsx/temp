@@ -1,10 +1,10 @@
-import { useState} from "react";
-import { FaGithub, FaLinkedin,FaEnvelope } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
-import emailjs from "@emailjs/browser";
-import { createRobot } from "./RobotCanvas.js";
-import { isMobile } from "./script.js";
+import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import toast, { Toaster } from "react-hot-toast";
+import {isMobile} from "./script.js"
+import { createRobot } from "./RobotCanvas.js";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
   const [userName, setuserName] = useState("");
@@ -12,23 +12,26 @@ const Footer = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const TEMPLATE_ID = "template_lr17rp1";
-  const PUBLICKEY = "jMx5bzPWmlYNaSvaO";
-  const SERVICE_ID = "service_iinsw15";
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+
+  console.log(TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsLoading(true);
 
-    var templateParams = {
+    const templateParams = {
       from_name: userName,
       from_email: email,
       message: message,
     };
 
     emailjs.init({
-      publicKey: PUBLICKEY,
+      publicKey: PUBLIC_KEY,
       limitRate: {
         id: "app",
         throttle: 10000,

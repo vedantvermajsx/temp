@@ -1,7 +1,7 @@
 import GitHubStars from "./GitHubStars";
 import PropTypes from "prop-types";
 
-function ProjectCard({ id, name, info, image, tools, stars, forward }) {
+function ProjectCard({ id, name, info, image, tools, stars, forward,git }) {
   return (
     <div id={id} className="project-card bg-gray-900 rounded-lg shadow-2xl p-4 max-w-xs text-white">
       <div className="relative h-56 rounded-lg overflow-hidden">
@@ -25,7 +25,7 @@ function ProjectCard({ id, name, info, image, tools, stars, forward }) {
         <h2 className="text-md font-bold truncate">{name}</h2>
         <p className="text-sm text-wrap truncate">{info}</p>
         <div className="flex items-center justify-between mt-3">
-          <GitHubStars link={forward} stars={stars}></GitHubStars>
+          <GitHubStars link={forward} stars={stars} git={git}></GitHubStars>
         </div>
 
         <div className="flex flex-wrap mt-3 gap-2">

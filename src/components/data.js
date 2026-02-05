@@ -75,7 +75,8 @@ export const Projects = [
     image: "./images/metadonate.png",
     info: `Meta Donate is a decentralized donation platform built with React for the frontend, Java for backend services, and Solidity for smart contracts. It uses MySQL for data storage and TailwindCSS for styling, with npm for package management.`,
     stars: 7,
-    forward: "MetaDonate",
+    forward: "https://metadonate.onrender.com",
+    git: "https://github.com/vedantvermajsx/MetaDonate"
   },
   {
     id: 4,
@@ -84,7 +85,8 @@ export const Projects = [
     image: "./images/animeXstream.png",
     info: `animeXstream is a streaming platform for anime enthusiasts. Built with React and styled using TailwindCSS, it offers a seamless user experience. npm is used for managing dependencies.`,
     stars: 5,
-    forward: "animeXstream",
+    forward: "https://animexstream-w598.onrender.com",
+    git: "https://github.com/vedantvermajsx/animeXstream"
   },
 
   {
@@ -94,7 +96,8 @@ export const Projects = [
     image: "./images/dictionary.jpeg",
     info: `Elegant dictionary is classy,elegant and interactive ,for boosting your vocab's and search word and bookmark you favourite's`,
     stars: 2,
-    forward: "Elegant-dictionary",
+    forward: "https://vedantvermajsx.github.io/Elegant-dictionary/",
+    git: "https://github.com/vedantvermajsx/Elegant-dictionary"
   },
   {
     id: 2,
@@ -103,7 +106,8 @@ export const Projects = [
     image: "./images/todo.png",
     info: `This todo list application is a simple yet effective tool for managing tasks. It is built using HTML for structure, CSS for styling, and JavaScript for functionality.`,
     stars: 3,
-    forward: "awesome-todo",
+    forward: "https://awesome-todo-nmy3.onrender.com",
+    git: "https://github.com/vedantvermajsx/awesome-todo"
   },
   {
     id: 1,
@@ -112,7 +116,8 @@ export const Projects = [
     image: "./images/tictactoe.png",
     info: `tic-tac-toe is a classic game implemented using HTML, CSS, and JavaScript. It features a responsive design and interactive gameplay.`,
     stars: 2,
-    forward: "tic-tac-toe",
+    forward: "https://tic-tac-toe-m06c.onrender.com",
+    git: "https://github.com/vedantvermajsx/tic-tac-toe"
   },{
       id: 0,
       name: "Ghostery",
@@ -120,6 +125,7 @@ export const Projects = [
       image: "./images/ghostery.png",
       info: `Ghostery is a lightweight, fun-focused game discovery platform where users can explore, search, and browse games effortlessly. Designed for entertainment rather than complexity, the project fetches data from external game APIs and presents them in a clean, visually appealing interface.`,
       stars: 2,
-      forward: "Ghostery",
+      forward: "https://ghostery.onrender.com",
+      git: "https://github.com/vedantvermajsx/Ghostery"
   },
 ];

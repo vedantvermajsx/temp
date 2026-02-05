@@ -16,6 +16,7 @@ function Project() {
           stars={ele.stars}
           tools={ele.tools}
           forward={ele.forward}
+          git={ele.git}
         />
       ))}
     </div>
