@@ -12,8 +12,7 @@ export function createRobot() {
     canvas.height = footer.clientHeight;
 
     const ctx = canvas.getContext("2d");
-    const temprobot = new Robot(ctx, ROBOT, canvas.width, canvas.height);
-    robot = temprobot;
+    robot= new Robot(ctx, ROBOT, canvas.width, canvas.height);
     repeat();
   } else {
     setTimeout(() => {

@@ -189,10 +189,12 @@ body {
 .project-card {
   height: 100%;
   transition: 0.3s ease transform;
+  filter:grayscale(20%);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+.project-card:hover{
+  transform: scale(1.01);
+  filter:grayscale(0);
 }
 
 .slider-container::-webkit-scrollbar {

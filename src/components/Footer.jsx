@@ -2,11 +2,11 @@ import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import toast, { Toaster } from "react-hot-toast";
-import {isMobile} from "./script.js"
-import { createRobot } from "./RobotCanvas.js";
 import emailjs from "@emailjs/browser";
+import Robot from "./Robot.jsx";
 
-const Footer = () => {
+
+const Footer = function(){
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -147,8 +147,7 @@ const Footer = () => {
   ))}
 </div>
 
-            <canvas className="robot-canvas absolute z-[1000] left-0 top-0  pointer-events-none"></canvas>
-            {!isMobile && createRobot()}
+          <Robot></Robot>
           </div>
 
           {/* Contact Form */}
