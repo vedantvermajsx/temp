@@ -33,7 +33,7 @@ function App() {
 
     document.onreadystatechange = function () {
       console.log(document.readyState);
-      if (document.readyState === "complete") {
+      if (document.readyState === "interactive") {
         setShowLoader(true);
         HandleContentLoaded();
       }
