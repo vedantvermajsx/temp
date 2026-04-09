@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Loader = ({ showLoader, showContent }) => {
   return (
     <div className={`fixed inset-0 z-[9999] ${!showContent && !showLoader ? "hidden" : ""} overflow-hidden backdrop-blur-sm transition-opacity duration-700 pointer-events-none`}>
@@ -82,6 +84,11 @@ const Loader = ({ showLoader, showContent }) => {
 
     </div>
   );
+};
+
+Loader.propTypes = {
+  showLoader: PropTypes.bool.isRequired,
+  showContent: PropTypes.bool.isRequired,
 };
 
 export default Loader;
