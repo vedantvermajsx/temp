@@ -18,7 +18,9 @@ const ScrollWatcher = lazy(() => import("./components/ScrollWatcher"));
 const Hero = lazy(() => import("./components/Hero"));
 
 function App() {
-  const [showLoader, setShowLoader] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
   useEffect(() => {
     import("./utils/script.js");
     import("./utils/Robot.js");
@@ -32,9 +34,9 @@ function App() {
     requestAnimationFrame(raf);
 
     document.onreadystatechange = function () {
-      console.log(document.readyState);
-      if (document.readyState === "interactive") {
-        setShowLoader(true);
+      if (document.readyState === "complete") {
+        setShowLoader(false);
+        setShowContent(true);
         HandleContentLoaded();
       }
     };
@@ -43,13 +45,13 @@ function App() {
 
   function HandleContentLoaded() {
     setTimeout(() => {
-      setShowLoader(false);
+      setShowContent(false);
     }, 3000);
   }
 
   return (
     <>
-      <Loader showLoader={showLoader} />
+      <Loader showContent={showContent} showLoader={showLoader} />
 
       <Suspense fallback={null}>
         <main className="page overflow-x-hidden scroll-smooth">
