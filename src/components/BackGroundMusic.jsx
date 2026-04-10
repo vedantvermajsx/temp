@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 
 const BackgroundMusic = () => {
-  const audioRef  = useRef(null);
+  const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audio   = new Audio("./des mots.mp3");
-    audio.loop    = true;
-    audio.volume  = 0.6;
-    audio.muted   = true;
+    const audio = new Audio("./sound.mp3");
+    audio.loop = true;
+    audio.volume = 0.6;
+    audio.muted = true;
     audioRef.current = audio;
 
     return () => {
@@ -24,7 +24,7 @@ const BackgroundMusic = () => {
     if (isPlaying) {
       a.pause();
     } else {
-      a.play().catch(() => {});
+      a.play().catch(() => { });
     }
     setIsPlaying((v) => !v);
   };
@@ -40,31 +40,24 @@ const BackgroundMusic = () => {
 
         transition-all duration-200"
     >
-      {/* Ripples — only animate when playing */}
-        {/* Ripples */}
-                      <div
-                          className={`absolute w-8 h-8 rounded-full border border-blue-300 ${
-                              isPlaying ? "animate-ripple1" : "opacity-0"
-                          }`}
-                      />
-                      <div
-                          className={`absolute w-8 h-8 rounded-full border border-blue-400 ${
-                              isPlaying ? "animate-ripple2" : "opacity-20"
-                          }`}
-                      />
-                      <div
-                          className={`absolute w-8 h-8 rounded-full border border-blue-300 ${
-                              isPlaying ? "animate-ripple3" : "opacity-30"
-                          }`}
-                      />
+      <div
+        className={`absolute w-8 h-8 rounded-full border border-blue-300 ${isPlaying ? "animate-ripple1" : "opacity-0"
+          }`}
+      />
+      <div
+        className={`absolute w-8 h-8 rounded-full border border-blue-400 ${isPlaying ? "animate-ripple2" : "opacity-20"
+          }`}
+      />
+      <div
+        className={`absolute w-8 h-8 rounded-full border border-blue-300 ${isPlaying ? "animate-ripple3" : "opacity-30"
+          }`}
+      />
 
-      {/* Center dot */}
       <span
         className={`relative w-2.5 h-2.5 rounded-full transition-colors duration-200
           ${isPlaying ? "bg-blue-400" : "bg-blue-600/60"}`}
       />
 
-      {/* Tooltip */}
       <span
         className="absolute -top-9 left-1/2 -translate-x-1/2 bg-black/80 text-white
           text-[10px] px-2 py-1 rounded-md pointer-events-none whitespace-nowrap

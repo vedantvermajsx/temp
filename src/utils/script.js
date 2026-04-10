@@ -1,7 +1,7 @@
 const ROBOT_IMAGES = [];
 for (let i = 0; i <= 15; i++) {
   const img = new Image();
-  img.src = `./robotball/skeleton-animation_0${i}.png`;
+  img.src = `./robotball/${i}.png`;
   ROBOT_IMAGES.push(img);
 }
 

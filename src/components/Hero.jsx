@@ -57,7 +57,7 @@ const Hero = () => {
           {/* Avatar */}
           <div className="flex-shrink-0">
             <img
-              src="./images/logo.jpg"
+              src="./images/logo.avif"
               alt="Vedant Verma"
               className="rounded-xl shadow-2xl w-28 h-28 sm:w-36 sm:h-36 object-cover ring-2 ring-cyan-400/30"
               loading="eager"

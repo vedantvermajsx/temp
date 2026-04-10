@@ -54,7 +54,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../public/hero2.gif');
+  background-image: url('../public/hero.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
