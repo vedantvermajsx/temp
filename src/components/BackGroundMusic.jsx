@@ -5,7 +5,7 @@ const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio("./sound.mp3");
+    const audio = new Audio("./music.mp3");
     audio.loop = true;
     audio.volume = 0.6;
     audio.muted = true;
