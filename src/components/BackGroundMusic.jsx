@@ -37,7 +37,6 @@ const BackgroundMusic = () => {
       className="fixed bottom-10 left-5 lg:left-16 z-[9999] group
         w-10 h-10 flex items-center justify-center rounded-full
         bg-black/40 hover:bg-black/60 backdrop-blur-sm
-
         transition-all duration-200"
     >
       <div

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const Loader = ({ showLoader, showContent }) => {
   return (
-    <div className={`fixed inset-0 z-[9999] ${!showContent && !showLoader ? "hidden" : ""} overflow-hidden backdrop-blur-sm transition-opacity duration-700 pointer-events-none`}>
+    <div className={`fixed inset-0 z-[99999] ${!showContent && !showLoader ? "hidden" : ""} overflow-hidden backdrop-blur-sm transition-opacity duration-700 pointer-events-none`}>
 
       {showContent && (
         <>

@@ -3,6 +3,12 @@
   src: url('../public/fonts/Anurati.otf');
 }
 
+@font-face {
+  font-family: stylish;
+  src: url('../public/fonts/Runiga.otf');
+}
+
+
 *,
 *::before,
 *::after {

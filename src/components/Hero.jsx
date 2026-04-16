@@ -66,10 +66,10 @@ const Hero = () => {
 
           {/* Text */}
           <div className="flex-1 text-center sm:text-left">
-            <p className="text-cyan-400 text-xs sm:text-sm font-mono tracking-widest uppercase mb-1 opacity-80">
+            <p className="text-cyan-400 text-xs sm:text-sm font-mono tracking-widest uppercase mb-1 opacity-80" style={{ fontFamily: "stylish" }}>
               Full Stack Developer
             </p>
-            <h1 className="text-blue-300 text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 animate-fade-in-down leading-tight">
+            <h1 className="text-blue-300 text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 animate-fade-in-down leading-tight" style={{ fontFamily: "stylish" }}>
               Welcome to my Portfolio
             </h1>
             <p

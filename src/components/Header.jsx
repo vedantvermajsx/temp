@@ -20,12 +20,11 @@ function Header() {
       style={{ width: "min(88vw, 780px)" }}
     >
       <div className="flex items-center gap-3 flex-shrink-0">
-        <img src="./images/logo.avif" alt="Logo" className="h-8 w-8" />
         <span
           className="text-[crimson] text-lg font-bold tracking-wide"
-          style={{ fontFamily: "monospace" }}
+          style={{ fontFamily: "stylish" }}
         >
-          VEDANT●JSX
+          Vedant●JSX
         </span>
       </div>
 
