@@ -98,7 +98,7 @@ export const Projects = [
     stars: 5,
     forward: "https://vedantvermajsx.github.io/AlgorithmVisualizer",
     git: "https://github.com/vedantvermajsx/AlgorithmVisualizer"
-}
+},
     {
         id: 2,
         name: "todo list",
