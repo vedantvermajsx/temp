@@ -90,15 +90,15 @@ export const Projects = [
     },
 
     {
-        id: 3,
-        name: "Elegant Dictionary",
-        tools: ["html", "tailwindcss", "react"],
-        image: "./images/dictionary.avif",
-        info: `Elegant dictionary is classy,elegant and interactive ,for boosting your vocab's and search word and bookmark you favourite's`,
-        stars: 2,
-        forward: "https://vedantvermajsx.github.io/Elegant-dictionary/",
-        git: "https://github.com/vedantvermajsx/Elegant-dictionary"
-    },
+    id: 2,
+    name: "algorithm-visualizer",
+    tools: ["html", "css", "js"],
+    image: "./images/algorithm-visualizer.avif",
+    info: `algorithm visualizer is a modular web application crafted using HTML, CSS, and JavaScript. it breathes life into well-known algorithms through dynamic animations and step-by-step execution. supports sorting, pathfinding, and graph algorithms with interactive controls for speed and input.`,
+    stars: 5,
+    forward: "https://vedantvermajsx.github.io/AlgorithmVisualizer",
+    git: "https://github.com/vedantvermajsx/AlgorithmVisualizer"
+}
     {
         id: 2,
         name: "todo list",
