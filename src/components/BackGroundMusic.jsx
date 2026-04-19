@@ -8,8 +8,17 @@ const BackgroundMusic = () => {
     const audio = new Audio("./music.mp3");
     audio.loop = true;
     audio.volume = 0.6;
-    audio.muted = true;
     audioRef.current = audio;
+
+    document.addEventListener(
+        "click",
+        () => {
+          audio.play().catch(() => {});
+          setIsPlaying(true);
+        },
+        { once: true }
+    );
+
 
     return () => {
       audio.pause();
