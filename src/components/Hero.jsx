@@ -10,19 +10,16 @@ const Hero = () => {
   const message = "Crafting robust and scalable Java applications";
 
   useEffect(() => {
-    const minLoaderTime = setTimeout(() => {
-      let index = 0;
-      const typeInterval = setInterval(() => {
-        if (index < message.length) {
-          if (textRef.current) textRef.current.textContent += message.charAt(index);
-          index++;
-        } else {
-          clearInterval(typeInterval);
-        }
-      }, 100);
-      return () => clearInterval(typeInterval);
-    }, 3000);
-    return () => clearTimeout(minLoaderTime);
+    let index = 0;
+    const typeInterval = setInterval(() => {
+      if (index < message.length) {
+        if (textRef.current) textRef.current.textContent += message.charAt(index);
+        index++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 100);
+    return () => clearInterval(typeInterval);
   }, []);
 
   useEffect(() => {

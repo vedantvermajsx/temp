@@ -19,6 +19,7 @@ function ProjectCard({ id, name, info, image, tools, stars, forward, git }) {
           src={image}
           alt={name}
           className="relative z-10 w-full h-full object-contain"
+          loading="lazy"
         />
       </div>
 
@@ -35,7 +36,7 @@ function ProjectCard({ id, name, info, image, tools, stars, forward, git }) {
               key={genre}
               className="flex gap-1 bg-gray-800 text-gray-300 text-xs px-2 py-1 rounded"
             >
-              <img className="w-4" src={`./svg/${genre}.svg`}></img>
+              <img className="w-4" src={`./svg/${genre}.svg`} loading="lazy"></img>
               {genre}
             </span>
           ))}

@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 
-const Loader = ({ showLoader, showContent }) => {
+const Loader = ({ showLoader, showContent, progress }) => {
+  const waveY = 200 - (progress * 0.8);
+  const rectY = waveY + 10;
+
   return (
-    <div className={`fixed inset-0 z-[99999] ${!showContent && !showLoader ? "hidden" : ""} overflow-hidden backdrop-blur-sm transition-opacity duration-700 pointer-events-none`}>
+    <div className={`fixed inset-0 z-[99999] ${!showContent && !showLoader ? "hidden" : ""} overflow-hidden backdrop-blur-sm transition-opacity duration-700 ${showLoader || showContent ? "pointer-events-auto" : "pointer-events-none"}`}>
 
       {showContent && (
         <>
@@ -75,10 +78,89 @@ const Loader = ({ showLoader, showContent }) => {
       )}
 
       {showLoader && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black">
-          <p className="text-white text-xl tracking-widest animate-pulse">
-            Loading...
-          </p>
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black">
+          <div className="w-full max-w-2xl px-4">
+            <svg
+              viewBox="0 0 690 425"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-auto"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <clipPath id="textClip">
+                  <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2">VedantJsx</text>
+                </clipPath>
+
+                <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#85B7EB" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="#185FA5" stopOpacity="1" />
+                </linearGradient>
+
+                <linearGradient id="foamGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#B5D4F4" stopOpacity="0.75" />
+                  <stop offset="100%" stopColor="#85B7EB" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+
+              {/* Ghost outline */}
+              <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2" fill="none" stroke="#378ADD" strokeWidth="1.5" opacity="0.2">VedantJsx</text>
+
+              {/* Water fill clipped to text shape */}
+              <g clipPath="url(#textClip)">
+                <g>
+                  <rect x="0" y={rectY} width="690" height={425 - rectY} fill="url(#waterGrad)" />
+
+                  {/* Foam layer */}
+                  <path
+                    fill="url(#foamGrad)"
+                    d="M0,8 C70,22 150,2 240,8 C330,18 420,0 510,8 C590,20 650,4 680,8 L680,90 L0,90 Z"
+                    style={{
+                      transform: `translate(0, ${waveY}px)`,
+                      animation: "waveMove 2s ease-in-out infinite alternate"
+                    }}
+                  />
+
+                  {/* Main wave */}
+                  <path
+                    fill="url(#waterGrad)"
+                    d="M0,14 C90,2 180,26 270,14 C360,2 450,26 540,14 C610,2 660,20 680,14 L680,90 L0,90 Z"
+                    style={{
+                      transform: `translate(0, ${waveY}px)`,
+                      animation: "waveMove 3s ease-in-out infinite alternate-reverse"
+                    }}
+                  />
+                </g>
+              </g>
+
+              {/* Crisp outline on top */}
+              <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2" fill="none" stroke="#185FA5" strokeWidth="1.5" opacity="0.45">VedantJsx</text>
+
+              {/* Progress Percentage Text */}
+              <text
+                x="340"
+                y="265"
+                textAnchor="middle"
+                fontFamily="stylish, monospace"
+                fontSize="24"
+                fill="#85B7EB"
+                letterSpacing="8"
+                className="animate-pulse"
+                style={{ opacity: progress > 5 ? 1 : 0, transition: "opacity 0.5s" }}
+              >
+                {Math.round(progress)}%
+              </text>
+            </svg>
+          </div>
+
+          <style>
+            {`
+              @keyframes waveMove {
+                from { transform: translate(-20px, ${waveY}px); }
+                to { transform: translate(20px, ${waveY}px); }
+              }
+            `}
+          </style>
         </div>
       )}
 
@@ -89,6 +171,7 @@ const Loader = ({ showLoader, showContent }) => {
 Loader.propTypes = {
   showLoader: PropTypes.bool.isRequired,
   showContent: PropTypes.bool.isRequired,
+  progress: PropTypes.number.isRequired,
 };
 
 export default Loader;

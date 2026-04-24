@@ -1,0 +1,52 @@
+<svg width="100%" viewBox="0 0 690 425" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Water filling VedantJsx loader</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Animated loader showing water rising to fill the text VedantJsx</desc>
+
+  <defs>
+    <clipPath id="textClip">
+      <text x="340" y="210" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="110" letter-spacing="2">VedantJsx</text>
+    </clipPath>
+
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#85B7EB" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#185FA5" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="foamGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B5D4F4" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#85B7EB" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  
+
+  <!-- Ghost outline -->
+  <text x="340" y="210" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="110" letter-spacing="2" fill="none" stroke="#378ADD" stroke-width="1.5" opacity="0.2" style="fill:none;stroke:rgb(55, 138, 221);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.2;font-family:&quot;Arial Black&quot;, Arial, sans-serif;font-size:110px;font-weight:900;text-anchor:middle;dominant-baseline:auto">VedantJsx</text>
+
+  <!-- Water fill clipped to text shape -->
+  <g clip-path="url(#textClip)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+      <rect x="0" y="195" width="680" height="220" fill="url(#waterGrad)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+      <!-- Foam layer -->
+      <path fill="url(#foamGrad)" d="M0,8 C70,22 150,2 240,8 C330,18 420,0 510,8 C590,20 650,4 680,8 L680,90 L0,90 Z" transform="translate(0,185)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+      <!-- Main wave -->
+      <path fill="url(#waterGrad)" d="M0,14 C90,2 180,26 270,14 C360,2 450,26 540,14 C610,2 660,20 680,14 L680,90 L0,90 Z" transform="translate(0,185)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+      <!-- Bubbles -->
+      <circle cx="120" cy="330" r="4" fill="#B5D4F4" opacity="0.6" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.361001;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+      <circle cx="240" cy="345" r="3" fill="#B5D4F4" opacity="0.5" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.457889;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+      <circle cx="370" cy="325" r="5" fill="#B5D4F4" opacity="0.55" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.540683;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+      <circle cx="470" cy="340" r="3" fill="#B5D4F4" opacity="0.4" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.0551175;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+      <circle cx="560" cy="330" r="4" fill="#B5D4F4" opacity="0.5" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.357384;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+      <circle cx="300" cy="360" r="3" fill="#B5D4F4" opacity="0.45" style="fill:rgb(181, 212, 244);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.566491;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    </g>
+  </g>
+
+  <!-- Crisp outline on top -->
+  <text x="340" y="210" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="110" letter-spacing="2" fill="none" stroke="#185FA5" stroke-width="1.5" opacity="0.45" style="fill:none;stroke:rgb(24, 95, 165);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Arial Black&quot;, Arial, sans-serif;font-size:110px;font-weight:900;text-anchor:middle;dominant-baseline:auto">VedantJsx</text>
+
+  <!-- Subtitle -->
+  <text x="340" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#888780" letter-spacing="4" style="fill:rgb(136, 135, 128);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">please wait</text>
+</svg>

@@ -40,6 +40,7 @@ function Tool({ tool }) {
         className="tool min-w-[8vw] min-h-[8vw] w-1/12 max-sm:w-2/12 place-items-center pointer-events-none"
         alt={tool[0]}
         src={tool[1]}
+        loading="lazy"
       />
     </motion.div>
   );
