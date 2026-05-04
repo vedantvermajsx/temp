@@ -28,7 +28,7 @@ const Hero = () => {
       const scrollTimeline = new ScrollTimeline({
         source: document.scrollingElement,
         axis: "block",
-        scrollOffsets: [CSS.percent(0), CSS.percent(100)],
+        scrollOffsets: ["0%", "100%"],
       });
       const backgroundKeyframes = [
         { opacity: 1, transform: "rotate3d(1,-1,0,0deg)", scale: 1, position: "fixed", zIndex: 0 },

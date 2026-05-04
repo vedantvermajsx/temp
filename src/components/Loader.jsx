@@ -88,7 +88,7 @@ const Loader = ({ showLoader, showContent, progress }) => {
               preserveAspectRatio="xMidYMid meet"
             >
               <defs>
-                <clipPath id="textClip">
+                <clipPath id="textClip" clipPathUnits="userSpaceOnUse">
                   <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2">VedantJsx</text>
                 </clipPath>
 
@@ -108,29 +108,27 @@ const Loader = ({ showLoader, showContent, progress }) => {
 
               {/* Water fill clipped to text shape */}
               <g clipPath="url(#textClip)">
-                <g>
-                  <rect x="0" y={rectY} width="690" height={425 - rectY} fill="url(#waterGrad)" />
+                <rect x="0" y={rectY} width="690" height={425 - rectY} fill="url(#waterGrad)" />
 
-                  {/* Foam layer */}
-                  <path
-                    fill="url(#foamGrad)"
-                    d="M0,8 C70,22 150,2 240,8 C330,18 420,0 510,8 C590,20 650,4 680,8 L680,90 L0,90 Z"
-                    style={{
-                      transform: `translate(0, ${waveY}px)`,
-                      animation: "waveMove 2s ease-in-out infinite alternate"
-                    }}
-                  />
+                {/* Foam layer */}
+                <path
+                  fill="url(#foamGrad)"
+                  d="M0,8 C70,22 150,2 240,8 C330,18 420,0 510,8 C590,20 650,4 680,8 L680,90 L0,90 Z"
+                  style={{
+                    transform: `translate(0, ${waveY}px)`,
+                    animation: "waveMove 2s ease-in-out infinite alternate"
+                  }}
+                />
 
-                  {/* Main wave */}
-                  <path
-                    fill="url(#waterGrad)"
-                    d="M0,14 C90,2 180,26 270,14 C360,2 450,26 540,14 C610,2 660,20 680,14 L680,90 L0,90 Z"
-                    style={{
-                      transform: `translate(0, ${waveY}px)`,
-                      animation: "waveMove 3s ease-in-out infinite alternate-reverse"
-                    }}
-                  />
-                </g>
+                {/* Main wave */}
+                <path
+                  fill="url(#waterGrad)"
+                  d="M0,14 C90,2 180,26 270,14 C360,2 450,26 540,14 C610,2 660,20 680,14 L680,90 L0,90 Z"
+                  style={{
+                    transform: `translate(0, ${waveY}px)`,
+                    animation: "waveMove 3s ease-in-out infinite alternate-reverse"
+                  }}
+                />
               </g>
 
               {/* Crisp outline on top */}
