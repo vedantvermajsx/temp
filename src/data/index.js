@@ -85,7 +85,7 @@ export const Projects = [
         image: "./images/animeXstream.avif",
         info: `animeXstream is a streaming platform for anime enthusiasts. Built with React and styled using TailwindCSS, it offers a seamless user experience. npm is used for managing dependencies.`,
         stars: 5,
-        forward: "https://animexstream-w598.onrender.com",
+        forward: "https://animexstream-gq0a.onrender.com/",
         git: "https://github.com/vedantvermajsx/animeXstream"
     },
 
