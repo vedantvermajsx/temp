@@ -69,6 +69,16 @@ export const tools = [
 ];
 export const Projects = [
     {
+    id: 6,
+    name: "Eira",
+    tools: ["react", "nodejs", "cloudinary", "mongodb", "tailwindcss", "npm"],
+    image: "./images/eira.avif",
+    info: `Eira Collections is a jewelry exploring and booking web application that allows users to browse, discover, and reserve elegant jewelry pieces with ease. Built using React for the frontend, Java for backend services, and styled with TailwindCSS, it ensures a smooth and modern user experience.`,
+    stars: 1,
+    forward: "https://eira-collections.onrender.com",
+    git: "https://github.com/vedantvermajsx/eira"
+},
+    {
         id: 5,
         name: "Meta Donate",
         tools: ["react", "java", "solidity", "mysql", "tailwindcss", "npm"],
