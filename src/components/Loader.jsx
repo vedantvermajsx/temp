@@ -9,7 +9,7 @@ const Loader = ({ showLoader, showContent, progress }) => {
 
       {showContent && (
         <>
-          <div className="absolute inset-0 bg-black animate-panelWipe" />
+          <div className="absolute inset-0 bg-black animate-panelWipe transition-all duration-1000" />
 
           <svg
             viewBox="0 0 1500 1062"

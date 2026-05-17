@@ -34,7 +34,7 @@ const GitHubStars = ({ link, git, stars }) => {
       </a>
 
       {/* Live demo arrow */}
-      <a href={link} className='outline-red-600  cursor-pointer outline hover:bg-red-600 outline-2 text-center text-3xl text-gray-300 rounded w-[80px] h-[40px]'>→</a>
+      <a href={link} target="_blank" rel="noopener noreferrer" className='outline-red-600  cursor-pointer outline hover:bg-red-600 outline-2 text-center text-3xl text-gray-300 rounded w-[80px] h-[40px]'>→</a>
 
     </div>
   );

@@ -91,7 +91,7 @@ function App() {
         setShowLoader(false);
         setShowContent(true);
         HandleContentLoaded();
-      }, 500);
+      }, 2000);
     }
   }, [progress]);
 

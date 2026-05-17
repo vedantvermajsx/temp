@@ -24,24 +24,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ─── Loader ──────────────────────────────────────────── */
-.loader {
-  z-index: 999999;
-  animation: loaderanimate 1s 0.2s linear forwards;
-}
 
-.custom-icon {
-  width: clamp(180px, 60vw, 300px);
-  height: 35pt;
-  fill: none;
-  stroke: #000;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  animation: carve 5s infinite alternate;
-}
 
-/* ─── Hero ────────────────────────────────────────────── */
 .hero-container {
   position: relative;
   min-height: 100vh;
@@ -94,14 +78,12 @@ body {
   box-shadow: inset 0 0 1px 0 rgba(0, 255, 255, 0.4), 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* ─── Page ────────────────────────────────────────────── */
 .page {
   background-color: #06030f;
   width: 100%;
   min-height: 100vh;
 }
 
-/* ─── Cards ───────────────────────────────────────────── */
 .card {
   font-family: monospace, Arial;
   font-size: 0.9em;
@@ -117,7 +99,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* ─── Sidebar (mobile menu) ──────────────────────────── */
 .sidebar {
   right: 0;
   top: 3.5rem;
@@ -135,7 +116,6 @@ body {
   height: max-content;
 }
 
-/* ─── Tools slider ────────────────────────────────────── */
 .slider-container {
   background-color: #06030f;
   overflow-x: hidden;
@@ -170,7 +150,6 @@ body {
   background: linear-gradient(270deg, rgba(6, 3, 15, 1) 0%, transparent 100%);
 }
 
-/* ─── Tool icon ───────────────────────────────────────── */
 .tool {
   background-color: #181221;
   box-shadow: 0 0 80px 1px rgb(151, 21, 21);
@@ -188,7 +167,6 @@ body {
   transform: scale(1.05);
 }
 
-/* ─── Slider animations ───────────────────────────────── */
 .slider {
   animation: slide 35s linear infinite;
 }
@@ -212,7 +190,6 @@ body {
   }
 }
 
-/* ─── Project cards ───────────────────────────────────── */
 .project-card {
   transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
   filter: grayscale(20%);
@@ -224,7 +201,6 @@ body {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* ─── Animations ─────────────────────────────────────── */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -253,42 +229,6 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 1.5s ease-out both;
-}
-
-@keyframes carve {
-  0% {
-    filter: blur(10px);
-    stroke-dasharray: 10;
-  }
-
-  20% {
-    filter: blur(0);
-  }
-
-  50% {
-    stroke-dasharray: 150;
-    fill: #00000000;
-  }
-
-  90% {
-    stroke-dasharray: 300;
-    fill: #000000;
-  }
-
-  100% {
-    stroke-dasharray: 350;
-    fill: #000000;
-  }
-}
-
-@keyframes loaderanimate {
-  from {
-    top: 0;
-  }
-
-  to {
-    top: -150%;
-  }
 }
 
 @keyframes gradient-x {
@@ -461,7 +401,6 @@ body {
   }
 }
 
-/* ─── z-index util ───────────────────────────────────── */
 .ultimate {
   z-index: 99999;
 }
@@ -499,7 +438,6 @@ body {
   }
 }
 
-/* ─── Footer input shared style ─────────────────────────── */
 .footer-input {
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -521,7 +459,6 @@ body {
   box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.15);
 }
 
-/* ─── Utils ───────────────────────────────────────────── */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
