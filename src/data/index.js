@@ -100,7 +100,7 @@ export const Projects = [
     },
 
     {
-    id: 2,
+    id: 3,
     name: "algorithm-visualizer",
     tools: ["html", "css", "js"],
     image: "./images/algorithm-visualizer.avif",

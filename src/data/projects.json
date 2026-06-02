@@ -1,0 +1,107 @@
+[
+    {
+        "id": 6,
+        "name": "Eira",
+        "tools": [
+            "react",
+            "nodejs",
+            "cloudinary",
+            "mongodb",
+            "tailwindcss",
+            "npm"
+        ],
+        "image": "./images/eira.avif",
+        "info": "Eira Collections is a jewelry exploring and booking web application that allows users to browse, discover, and reserve elegant jewelry pieces with ease. Built using React for the frontend, Java for backend services, and styled with TailwindCSS, it ensures a smooth and modern user experience.",
+        "stars": 1,
+        "forward": "https://eira-collections.onrender.com",
+        "git": "https://github.com/vedantvermajsx/eira"
+    },
+    {
+        "id": 5,
+        "name": "Meta Donate",
+        "tools": [
+            "react",
+            "java",
+            "solidity",
+            "mysql",
+            "tailwindcss",
+            "npm"
+        ],
+        "image": "./images/metadonate.avif",
+        "info": "Meta Donate is a decentralized donation platform built with React for the frontend, Java for backend services, and Solidity for smart contracts. It uses MySQL for data storage and TailwindCSS for styling, with npm for package management.",
+        "stars": 7,
+        "forward": "https://metadonate.onrender.com",
+        "git": "https://github.com/vedantvermajsx/MetaDonate"
+    },
+    {
+        "id": 4,
+        "name": "animeXstream",
+        "tools": [
+            "react",
+            "tailwindcss",
+            "npm"
+        ],
+        "image": "./images/animeXstream.avif",
+        "info": "animeXstream is a streaming platform for anime enthusiasts. Built with React and styled using TailwindCSS, it offers a seamless user experience. npm is used for managing dependencies.",
+        "stars": 5,
+        "forward": "https://animexstream-gq0a.onrender.com/",
+        "git": "https://github.com/vedantvermajsx/animeXstream"
+    },
+    {
+        "id": 3,
+        "name": "algorithm-visualizer",
+        "tools": [
+            "html",
+            "css",
+            "js"
+        ],
+        "image": "./images/algorithm-visualizer.avif",
+        "info": "algorithm visualizer is a modular web application crafted using HTML, CSS, and JavaScript. It breathes life into well-known algorithms through dynamic animations and step-by-step execution. Supports sorting, pathfinding, and graph algorithms with interactive controls for speed and input.",
+        "stars": 5,
+        "forward": "https://vedantvermajsx.github.io/AlgorithmVisualizer",
+        "git": "https://github.com/vedantvermajsx/AlgorithmVisualizer"
+    },
+    {
+        "id": 2,
+        "name": "todo list",
+        "tools": [
+            "html",
+            "css",
+            "js"
+        ],
+        "image": "./images/todo.avif",
+        "info": "This todo list application is a simple yet effective tool for managing tasks. It is built using HTML for structure, CSS for styling, and JavaScript for functionality.",
+        "stars": 3,
+        "forward": "https://awesome-todo-nmy3.onrender.com",
+        "git": "https://github.com/vedantvermajsx/awesome-todo"
+    },
+    {
+        "id": 1,
+        "name": "tic-tac-toe",
+        "tools": [
+            "html",
+            "css",
+            "js"
+        ],
+        "image": "./images/tictactoe.avif",
+        "info": "tic-tac-toe is a classic game implemented using HTML, CSS, and JavaScript. It features a responsive design and interactive gameplay.",
+        "stars": 2,
+        "forward": "https://tic-tac-toe-m06c.onrender.com",
+        "git": "https://github.com/vedantvermajsx/tic-tac-toe"
+    },
+    {
+        "id": 0,
+        "name": "Ghostery",
+        "tools": [
+            "html",
+            "css",
+            "js",
+            "npm"
+        ],
+        "image": "./images/ghostery.avif",
+        "info": "Ghostery is a lightweight, fun-focused game discovery platform where users can explore, search, and browse games effortlessly. Designed for entertainment rather than complexity, the project fetches data from external game APIs and presents them in a clean, visually appealing interface.",
+        "stars": 2,
+        "forward": "https://ghostery.onrender.com",
+        "git": "https://github.com/vedantvermajsx/Ghostery"
+    }
+]
