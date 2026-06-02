@@ -22,7 +22,7 @@ function Features() {
       <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-200 mb-12 tracking-tight">
         What I Bring to the Table
       </h2>
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="flex flex-wrap gap-12 justify-center">
         {features.map((feature) => (
           <Card
             key={feature[0]}

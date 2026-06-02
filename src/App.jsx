@@ -28,7 +28,6 @@ function App() {
   });
 
   useEffect(() => {
-    // Preload critical assets
     const gif = new Image();
     gif.src = "./hero.gif";
     gif.onload = () => setAssetsLoaded(prev => ({ ...prev, gif: true }));
@@ -42,7 +41,7 @@ function App() {
 
     const lenis = new Lenis({ duration: 0.5, smoothWheel: true });
     lenisRef.current = lenis;
-    lenis.stop(); // Pause scrolling immediately
+    lenis.stop();
 
     function raf(time) {
       lenis.raf(time);
@@ -50,7 +49,6 @@ function App() {
     }
     requestAnimationFrame(raf);
 
-    // Disable scrolling initially
     document.body.style.overflow = "hidden";
 
     const handleLoad = () => {
