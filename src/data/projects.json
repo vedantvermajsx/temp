@@ -1,5 +1,21 @@
 [
     {
+        "id": 7,
+        "name": "Task Manager",
+        "tools": [
+            "react",
+            "nodejs",
+            "mongodb",
+            "cloudinary",
+            "tailwindcss"
+        ],
+        "image": "https://res.cloudinary.com/druwykigf/image/upload/v1780421974/profile/slr3l3ictfmy5loiqfju.avif",
+        "info": "Task Manager is a modern full-stack productivity application that helps users organize and manage daily tasks efficiently. It features secure JWT authentication, task CRUD operations, profile management with Cloudinary image uploads, OTP-based password recovery, interactive analytics, calendar integration, and a responsive animated user interface built with React and TailwindCSS.",
+        "stars": 1,
+        "forward": "https://task-manager-taskly.onrender.com",
+        "git": "https://github.com/vedantvermajsx/task-manager"
+    }
+    {
         "id": 6,
         "name": "Eira",
         "tools": [
