@@ -13,7 +13,7 @@ function Project() {
     setLoading(true);
     const _ = async () => {
 
-      const response = await fetch('https://raw.githubusercontent.com/vedantvermajsx/temp/refs/heads/master/src/data/projects.json');
+      const response = await fetch('https://raw.githubusercontent.com/vedantvermajsx/data/refs/heads/master/project.json');
       const data = await response.text();
       const projectsData = await JSON.parse(data);
       setProjects(projectsData);

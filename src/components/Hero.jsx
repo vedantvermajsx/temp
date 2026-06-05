@@ -51,7 +51,6 @@ const Hero = () => {
         <BsSoundwave className="absolute inset-0 w-full h-full text-cyan-100/5 pointer-events-none sound-wave opacity-30" />
 
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
-          {/* Avatar */}
           <div className="flex-shrink-0">
             <img
               src="./images/logo.avif"
@@ -61,13 +60,12 @@ const Hero = () => {
             />
           </div>
 
-          {/* Text */}
           <div className="flex-1 text-center sm:text-left">
             <p className="text-cyan-400 text-xs sm:text-sm font-mono tracking-widest uppercase mb-1 opacity-80" style={{ fontFamily: "stylish" }}>
               Full Stack Developer
             </p>
             <h1 className="text-blue-300 text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 animate-fade-in-down leading-tight" style={{ fontFamily: "stylish" }}>
-              Welcome to my Portfolio
+              Vedant Verma | Full Stack Developer
             </h1>
             <p
               ref={textRef}
@@ -78,7 +76,6 @@ const Hero = () => {
               software solutions.
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
               <SocialButton
                 href="https://github.com/vedantvermajsx"
@@ -100,7 +97,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 overflow-hidden">
         <div className="w-px animate-scroll-down" />
       </div>

@@ -76,7 +76,8 @@ function App() {
             clearInterval(timer);
             return targetProgress;
           }
-          return Math.min(prev + 1, targetProgress);
+          const random = Math.random() * 5;
+          return Math.min(prev + random, targetProgress);
         });
       }, 10);
       return () => clearInterval(timer);
@@ -89,7 +90,7 @@ function App() {
         setShowLoader(false);
         setShowContent(true);
         HandleContentLoaded();
-      }, 2000);
+      }, 800);
     }
   }, [progress]);
 

@@ -1,0 +1,20 @@
+{
+  "short_name": "Vedant",
+  "name": "Vedant Verma Portfolio",
+  "icons": [
+    {
+      "src": "/images/logo.avif",
+      "type": "image/avif",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/logo.avif",
+      "type": "image/avif",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
