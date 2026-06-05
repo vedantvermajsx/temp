@@ -103,14 +103,11 @@ const Loader = ({ showLoader, showContent, progress }) => {
                 </linearGradient>
               </defs>
 
-              {/* Ghost outline */}
               <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2" fill="none" stroke="#378ADD" strokeWidth="1.5" opacity="0.2">VedantJsx</text>
 
-              {/* Water fill clipped to text shape */}
               <g clipPath="url(#textClip)">
                 <rect x="0" y={rectY} width="690" height={425 - rectY} fill="url(#waterGrad)" />
 
-                {/* Foam layer */}
                 <path
                   fill="url(#foamGrad)"
                   d="M0,8 C70,22 150,2 240,8 C330,18 420,0 510,8 C590,20 650,4 680,8 L680,90 L0,90 Z"
@@ -120,7 +117,6 @@ const Loader = ({ showLoader, showContent, progress }) => {
                   }}
                 />
 
-                {/* Main wave */}
                 <path
                   fill="url(#waterGrad)"
                   d="M0,14 C90,2 180,26 270,14 C360,2 450,26 540,14 C610,2 660,20 680,14 L680,90 L0,90 Z"
@@ -131,10 +127,8 @@ const Loader = ({ showLoader, showContent, progress }) => {
                 />
               </g>
 
-              {/* Crisp outline on top */}
               <text x="340" y="210" textAnchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900" fontSize="110" letterSpacing="2" fill="none" stroke="#185FA5" strokeWidth="1.5" opacity="0.45">VedantJsx</text>
 
-              {/* Progress Percentage Text */}
               <text
                 x="340"
                 y="265"

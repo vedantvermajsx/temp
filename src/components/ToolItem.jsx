@@ -8,7 +8,7 @@ const ToolItem = ({ name, icon }) => {
         >
             <div className="relative group">
 
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center  rounded-2xl shadow-[-5px_5px_0px_0px_rgba(6,145,255,0.4),-10px_10px_0px_0px_rgba(46,100,240,0.3)]">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center  rounded-2xl shadow-[-5px_5px_0px_0px_rgba(6,145,255,0.4),-10px_10px_0px_0px_rgba(46,100,240,0.3)] hover:shadow-[-5px_5px_0px_0px_rgba(255,10,10,0.4),-10px_10px_0px_0px_rgba(150,0,0,0.3)]">
                     <img
                         src={icon}
                         alt={name}
